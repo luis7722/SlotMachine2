@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/jquery.slotmachine.css" type="text/css" media="screen"/>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+
+
+
+            <div class="row">
+                <div class="col-sm-offset-2">
+                    <h1>PERFORMANCE MANAGEMENT SLOT MACHINE</h1>
+                </div>
+
+            </div>
+
+
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <div id="slotMachineButtonShuffle" class="">
+
+                    <div id="casino">
+                        <div class="content" >
+                            <div>
+                                <div id="casino1" class="slotMachine firstslotmachine">
+                                    <div class="slot slot1"></div>
+                                    <div class="slot slot2"></div>
+                                    <div class="slot slot3"></div>
+                                    <div class="slot slot4"></div>
+                                    <div class="slot slot5"></div>
+                                    <div class="slot slot6"></div>
+                                </div>
+
+                                <div id="casino2" class="slotMachine">
+                                    <div class="slot slot1"></div>
+                                    <div class="slot slot2"></div>
+                                    <div class="slot slot3"></div>
+                                    <div class="slot slot4"></div>
+                                    <div class="slot slot5"></div>
+                                    <div class="slot slot6"></div>
+                                </div>
+
+                                <div id="casino3" class="slotMachine">
+                                    <div class="slot slot1"></div>
+                                    <div class="slot slot2"></div>
+                                    <div class="slot slot3"></div>
+                                    <div class="slot slot4"></div>
+                                    <div class="slot slot5"></div>
+                                    <div class="slot slot6"></div>
+                                </div>
+                                <div id="casino4" class="slotMachine">
+                                    <div class="slot slot1"></div>
+                                    <div class="slot slot2"></div>
+                                    <div class="slot slot3"></div>
+                                    <div class="slot slot4"></div>
+                                    <div class="slot slot5"></div>
+                                    <div class="slot slot6"></div>
+                                </div>
+                                <div id="casino5" class="slotMachine">
+                                    <div class="slot slot1"></div>
+                                    <div class="slot slot2"></div>
+                                    <div class="slot slot3"></div>
+                                    <div class="slot slot4"></div>
+                                    <div class="slot slot5"></div>
+                                    <div class="slot slot6"></div>
+                                </div>
+
+                            </div>
+                            <div class="row" role="group">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-offset-8">
+                    <img src="img/logo%20l2020.png" class="l2020logo">
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var machine1 = $("#casino1").slotMachine({
+            active: 0,
+            delay: 500
+        });
+
+        var machine2 = $("#casino2").slotMachine({
+            active: 1,
+            delay: 500
+        });
+
+        machine3 = $("#casino3").slotMachine({
+            active: 2,
+            delay: 500
+        });
+        machine4 = $("#casino4").slotMachine({
+            active: 2,
+            delay: 500
+        });
+        machine5 = $("#casino5").slotMachine({
+            active: 2,
+            delay: 500
+        });
+
+
+        $("#slotMachineButtonShuffle").click(function () {
+            machine1.shuffle();
+            machine2.shuffle();
+            machine3.shuffle();
+            machine4.shuffle();
+            machine5.shuffle();
+            clearTimeout(a);
+            var a=setTimeout(function () {
+                machine1.stop();
+                machine2.stop();
+                machine3.stop();
+                machine4.stop();
+                machine5.stop();
+            },4000)
+        });
+
+
+    });
+</script>
+
+</body>
+
+</html>
